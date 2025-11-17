@@ -1,0 +1,156 @@
+.techStack {
+  padding: 100px 0;
+  background: linear-gradient(180deg, var(--autumn-bg) 0%, var(--autumn-cream) 100%);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--autumn-dark);
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1.2rem;
+  color: var(--autumn-text-light);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(139, 69, 19, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--autumn-primary), var(--autumn-orange));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.card:hover::before {
+  transform: scaleX(1);
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(217, 119, 87, 0.25);
+  border-color: var(--autumn-primary);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--autumn-light);
+}
+
+.icon {
+  color: var(--autumn-primary);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.card:hover .icon {
+  transform: scale(1.1) rotate(5deg);
+  color: var(--autumn-orange);
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--autumn-dark);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+}
+
+.listItem {
+  padding: 0.75rem 0;
+  color: var(--autumn-text);
+  position: relative;
+  padding-left: 1.5rem;
+  line-height: 1.6;
+}
+
+.listItem::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+  color: var(--autumn-primary);
+  font-weight: bold;
+}
+
+.learning {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--autumn-primary) 0%, var(--autumn-orange) 100%);
+  border-radius: 15px;
+  margin-top: 3rem;
+}
+
+.learningText {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .techStack {
+    padding: 60px 0;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+}
+

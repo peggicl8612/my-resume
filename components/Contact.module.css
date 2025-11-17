@@ -1,0 +1,151 @@
+.contact {
+  padding: 100px 0;
+  background: linear-gradient(180deg, var(--autumn-cream) 0%, var(--autumn-bg) 100%);
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+.content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--autumn-dark);
+  margin-bottom: 1.5rem;
+}
+
+.description {
+  font-size: 1.3rem;
+  color: var(--autumn-text-light);
+  margin-bottom: 3rem;
+  line-height: 1.8;
+}
+
+.contactBox {
+  background: white;
+  border-radius: 25px;
+  padding: 3rem;
+  box-shadow: 0 15px 50px rgba(139, 69, 19, 0.15);
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.contactBox::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--autumn-primary), var(--autumn-orange), var(--autumn-primary));
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.contactItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--autumn-light);
+  text-align: left;
+  transition: all 0.3s ease;
+  border-radius: 10px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.contactItem:hover {
+  background: rgba(217, 119, 87, 0.05);
+  transform: translateX(5px);
+}
+
+.contactItem:hover .contactIcon {
+  transform: scale(1.15) rotate(5deg);
+  color: var(--autumn-orange);
+}
+
+.contactItem:last-child {
+  border-bottom: none;
+}
+
+.contactIcon {
+  flex-shrink: 0;
+  color: var(--autumn-primary);
+  transition: all 0.3s ease;
+}
+
+.contactLabel {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--autumn-dark);
+  margin-bottom: 0.5rem;
+}
+
+.contactValue {
+  font-size: 1.1rem;
+  color: var(--autumn-text);
+  line-height: 1.6;
+}
+
+.footer {
+  padding: 2rem;
+  background: linear-gradient(135deg, var(--autumn-primary) 0%, var(--autumn-orange) 100%);
+  border-radius: 15px;
+}
+
+.footerText {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 0;
+  }
+
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .contactBox {
+    padding: 2rem 1.5rem;
+  }
+
+  .contactItem {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+     width: 100%;
+  }
+
+  .contactIcon {
+    margin: 0 auto;
+  }
+
+  .footerText {
+    font-size: 1rem;
+  }
+}
+

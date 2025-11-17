@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* 秋天色調 */
+  --autumn-primary: #d97757;
+  --autumn-secondary: #b8860b;
+  --autumn-accent: #cd853f;
+  --autumn-dark: #8b4513;
+  --autumn-light: #f5deb3;
+  --autumn-cream: #fff8dc;
+  --autumn-orange: #ff8c42;
+  --autumn-brown: #a0522d;
+   --autumn-text: #231f1c;
+  --autumn-text-light: #6b4423;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 平滑滾動指示器 */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--autumn-bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--autumn-primary), var(--autumn-orange));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, var(--autumn-orange), var(--autumn-primary));
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--autumn-bg);
+  color: var(--autumn-text);
+  line-height: 1.6;
+}
+
+/* 捲動動畫 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* 響應式容器 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+}
+
