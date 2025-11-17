@@ -9,11 +9,13 @@ Vercel 是 Next.js 的官方平台，提供最佳的 Next.js 支援和性能。
 ### 設置步驟：
 
 1. **在 Vercel 創建專案**
+
    - 訪問 [Vercel](https://vercel.com)
    - 使用 GitHub 帳號登入
    - 導入你的 GitHub 倉庫
 
 2. **獲取 Vercel Token 和專案資訊**
+
    - 在 Vercel Dashboard 中，進入專案設置
    - 在 Settings > General 中找到以下資訊：
      - `VERCEL_ORG_ID`
@@ -21,6 +23,7 @@ Vercel 是 Next.js 的官方平台，提供最佳的 Next.js 支援和性能。
    - 在 [Vercel Account Settings > Tokens](https://vercel.com/account/tokens) 創建一個新的 Token
 
 3. **在 GitHub 設置 Secrets**
+
    - 進入你的 GitHub 倉庫
    - 點擊 Settings > Secrets and variables > Actions
    - 添加以下 Secrets：
@@ -39,16 +42,19 @@ GitHub Pages 是免費的靜態網站託管服務。
 ### 設置步驟：
 
 1. **啟用 GitHub Pages**
+
    - 進入你的 GitHub 倉庫
    - 點擊 Settings > Pages
    - 在 Source 中選擇 "GitHub Actions"
 
 2. **設置權限**
+
    - 進入 Settings > Actions > General
    - 在 "Workflow permissions" 中選擇 "Read and write permissions"
    - 勾選 "Allow GitHub Actions to create and approve pull requests"
 
 3. **啟用 Workflow**
+
    - 確保 `.github/workflows/deploy-github-pages.yml` 文件存在
    - 當你推送代碼到 `main` 分支時，會自動觸發部署
 
@@ -78,8 +84,8 @@ EXPORT_STATIC=true npm run build
 ## 故障排除
 
 如果部署失敗，請檢查：
+
 1. GitHub Actions 的日誌輸出
 2. 確保所有必要的 Secrets 都已設置
 3. 確保 Node.js 版本兼容（本專案使用 Node.js 20）
 4. 檢查 `package.json` 中的依賴是否正確安裝
-
