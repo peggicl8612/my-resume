@@ -24,7 +24,7 @@ npm install
 npm run dev
 ```
 
-開啟 [http://localhost:3000](http://localhost:3000) 查看網站。
+開啟 [https://peggicl8612.github.io/my-resume/] 查看網站。
 
 ### 建置生產版本
 
